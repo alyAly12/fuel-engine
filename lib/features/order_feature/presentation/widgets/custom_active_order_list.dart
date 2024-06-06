@@ -16,21 +16,21 @@ class CustomActiveOrderList extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 1, horizontal: 0),
+              padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 0),
               child: ListView.separated(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                padding: EdgeInsets.only(top: 10),
+                physics: const NeverScrollableScrollPhysics(),
+                padding: const EdgeInsets.only(top: 10),
                 itemCount: ItemList.activeOrdersList.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0.7, vertical: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 0.7, vertical: 8),
                       child: ActiveOrdersItem(
                           image: ItemList.activeOrdersList[index].image,
                           color: ItemList.activeOrdersList[index].color));
                 },
                 separatorBuilder: (BuildContext context, int index) {
-                  return Divider(
+                  return const Divider(
                     thickness: 0.5,
                     color: Colors.grey,
                   );

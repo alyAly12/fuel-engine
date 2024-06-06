@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-
+import '../utils/assets_manager.dart';
 import 'custom_text_widget.dart';
 
 class CustomToggleButton extends StatelessWidget {
@@ -33,7 +32,7 @@ class CustomToggleButton extends StatelessWidget {
         onTap();
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
         decoration: BoxDecoration(color: buttonColor, borderRadius: radius, border: border),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
@@ -46,7 +45,7 @@ class CustomToggleButton extends StatelessWidget {
                 fontWeight: textWeight,
                 color: titleColor,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 4,
               ),
               Visibility(

@@ -39,7 +39,7 @@ class _OrderProductListState extends State<OrderProductList> {
               },
               radius: BorderRadius.circular(20),
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             CustomToggleButton(
@@ -58,7 +58,7 @@ class _OrderProductListState extends State<OrderProductList> {
             )
           ],
         ),
-        SizedBox(width: 4),
+        const SizedBox(width: 4),
         CustomToggleButton(
           productType: AppStrings.gas95,
           buttonColor: _gas95 ? AppColors.redColor : Colors.white,

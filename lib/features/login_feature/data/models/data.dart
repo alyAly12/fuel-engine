@@ -1,4 +1,5 @@
-import 'package:sayarah/features/login_feature/data/models/worker.dart';
+
+import 'package:fuelsystem/features/login_feature/data/models/worker.dart';
 
 class LoginData {
   Worker? worker;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
+
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
+
 
 class FromTextField extends StatelessWidget {
   const FromTextField({

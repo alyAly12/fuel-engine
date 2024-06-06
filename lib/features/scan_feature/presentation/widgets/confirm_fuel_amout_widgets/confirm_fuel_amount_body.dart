@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/component/pick_image_function.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_dialog.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/component/custom_button.dart';
+
 import '../../../../../../core/utils/assets_manager.dart';
+import '../../../../../core/component/custom_button.dart';
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/component/pick_image_function.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_dialog.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/app_strings.dart';
 
 class ConfirmFuelAmountBody extends StatefulWidget {
   const ConfirmFuelAmountBody({super.key});
@@ -94,7 +95,7 @@ class _ConfirmFuelAmountBodyState extends State<ConfirmFuelAmountBody> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -123,7 +124,7 @@ class _ConfirmFuelAmountBodyState extends State<ConfirmFuelAmountBody> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               PickImageFunction(
@@ -137,11 +138,11 @@ class _ConfirmFuelAmountBodyState extends State<ConfirmFuelAmountBody> {
                   },
                   file: _pickedImage3?.path,
                   title: 'Car'),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: CustomLoginButton(
                     textColor: Colors.white,
                     buttonHeight: 55,

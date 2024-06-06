@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
 import '../../../../../core/component/custom_text_widget.dart';
 import '../../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_colors.dart';
 
 class CompletedOrdersItem extends StatelessWidget {
   const CompletedOrdersItem({super.key, required this.image, required this.color});
@@ -16,7 +16,7 @@ class CompletedOrdersItem extends StatelessWidget {
         GoRouter.of(context).push(AppRoute.kOrdersDetails);
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,12 +28,12 @@ class CompletedOrdersItem extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
                   children: [
-                    const CustomTextWidget(
+                    CustomTextWidget(
                       title: '30 L (Fuel 91)',
                       fontSize: 15,
                       color: Colors.black,
@@ -41,7 +41,7 @@ class CompletedOrdersItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 10,
                 ),
                 CustomTextWidget(

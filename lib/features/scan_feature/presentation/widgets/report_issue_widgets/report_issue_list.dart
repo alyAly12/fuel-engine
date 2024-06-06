@@ -22,7 +22,7 @@ class _ReportIssueListState extends State<ReportIssueList> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 0.5),
+          padding: const EdgeInsets.symmetric(horizontal: 0.5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -42,7 +42,7 @@ class _ReportIssueListState extends State<ReportIssueList> {
                 },
                 radius: BorderRadius.circular(12),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               CustomToggleButton(
@@ -64,11 +64,11 @@ class _ReportIssueListState extends State<ReportIssueList> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 2),
+          padding: const EdgeInsets.symmetric(vertical: 2),
           child: CustomToggleButton(
             textSize: 13,
             textWeight: FontWeight.normal,

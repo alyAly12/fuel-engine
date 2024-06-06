@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:sayarah/core/utils/app_consts.dart';
-import 'package:sayarah/core/utils/endpoints.dart';
 import 'package:uuid/uuid.dart';
+
+import '../utils/app_consts.dart';
+import '../utils/endpoints.dart';
 
 class NetworkService {
   static NetworkService? _this;
@@ -35,9 +36,9 @@ class NetworkService {
 
   NetworkService._() {
     unAuthedDio.options.baseUrl = _baseURL;
-    unAuthedDio.options.connectTimeout = Duration(seconds: 50);
+    unAuthedDio.options.connectTimeout = const Duration(seconds: 50);
     authenticatedDio.options.baseUrl = _baseURL;
-    authenticatedDio.options.connectTimeout = Duration(seconds: 50);
+    authenticatedDio.options.connectTimeout = const Duration(seconds: 50);
 
     var uuid = const Uuid();
 
@@ -96,7 +97,7 @@ class NetworkService {
           handler.next(response);
         },
         onError: (
-          DioError error,
+          DioException error,
           ErrorInterceptorHandler errorHandler,
         ) {
           EasyLoading.dismiss();
@@ -151,7 +152,7 @@ class NetworkService {
           handler.next(response);
         },
         onError: (
-          DioError error,
+          DioException error,
           ErrorInterceptorHandler errorHandler,
         ) async {
           EasyLoading.dismiss();

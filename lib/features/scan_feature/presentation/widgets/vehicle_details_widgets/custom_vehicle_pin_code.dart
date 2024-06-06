@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
+
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
 
 class CustomVehiclePinCode extends StatefulWidget {
   const CustomVehiclePinCode({
@@ -41,7 +42,7 @@ class _CustomVehiclePinCodeState extends State<CustomVehiclePinCode> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,11 +52,11 @@ class _CustomVehiclePinCodeState extends State<CustomVehiclePinCode> {
             fontSize: 15,
             color: AppColors.orderNumberColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 3),
+            padding: const EdgeInsets.symmetric(vertical: 3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -107,7 +108,7 @@ class PinNumberTextFieldBox extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String)? onSubmitted;
   final Function()? onEditingComplete;
-  PinNumberTextFieldBox({
+  const PinNumberTextFieldBox({
     super.key,
     required this.first,
     required this.last,
@@ -118,7 +119,7 @@ class PinNumberTextFieldBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 90,
       child: AspectRatio(
         aspectRatio: 0.7,
@@ -131,28 +132,28 @@ class PinNumberTextFieldBox extends StatelessWidget {
             if (value.length == 1 && last == false) {
               FocusScope.of(context).nextFocus();
             }
-            if (value.length == 0 && first == false) {
+            if (value.isEmpty && first == false) {
               FocusScope.of(context).previousFocus();
             }
           },
           showCursor: false,
           readOnly: false,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.greyColor),
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.greyColor),
           keyboardType: TextInputType.number,
           maxLength: 1,
           decoration: InputDecoration(
             // contentPadding: EdgeInsets.all(0),
-            counter: Offstage(),
+            counter: const Offstage(),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: AppColors.orderNumberColor),
+                borderSide: const BorderSide(width: 2, color: AppColors.orderNumberColor),
                 borderRadius: BorderRadius.circular(10)),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: AppColors.orderNumberColor),
+                borderSide: const BorderSide(width: 2, color: AppColors.orderNumberColor),
                 borderRadius: BorderRadius.circular(10)),
             hintText: '0',
             hintStyle:
-                TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.greyColor),
+                const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.greyColor),
           ),
         ),
       ),

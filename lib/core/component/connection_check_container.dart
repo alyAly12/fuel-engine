@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-
 import '../commom_bloc/connection_check_bloc/connection_check_bloc.dart';
+import 'custom_text_widget.dart';
 
 class ConnectionCheckContainer extends StatelessWidget {
   const ConnectionCheckContainer({super.key});
@@ -14,7 +13,7 @@ class ConnectionCheckContainer extends StatelessWidget {
       builder: (context, state) {
         if (state is ConnectedState) {
           return Padding(
-            padding: EdgeInsets.only(left: 3, right: 3),
+            padding: const EdgeInsets.only(left: 3, right: 3),
             child: Container(
               height: 10,
               width: double.infinity,
@@ -25,7 +24,7 @@ class ConnectionCheckContainer extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
                       CustomTextWidget(
@@ -34,35 +33,35 @@ class ConnectionCheckContainer extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Icon(
                     state.icon,
                     color: state.color,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  VerticalDivider(
+                  const VerticalDivider(
                     thickness: 2,
                     color: Colors.grey,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   GestureDetector(
                       onTap: () {
                         GoRouter.of(context).pop();
                       },
-                      child: Text('ok'))
+                      child: const Text('ok'))
                 ],
               ),
             ),
           );
         } else if (state is NotConnectedState) {
           return Padding(
-            padding: EdgeInsets.only(left: 3, right: 3),
+            padding: const EdgeInsets.only(left: 3, right: 3),
             child: Container(
               height: 10,
               width: double.infinity,
@@ -73,7 +72,7 @@ class ConnectionCheckContainer extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
                       CustomTextWidget(
@@ -82,30 +81,30 @@ class ConnectionCheckContainer extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Icon(
                     state.icon,
                     color: state.color,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  VerticalDivider(
+                  const VerticalDivider(
                     thickness: 2,
                     color: Colors.grey,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
-                  Text('ok')
+                  const Text('ok')
                 ],
               ),
             ),
           );
         }
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },

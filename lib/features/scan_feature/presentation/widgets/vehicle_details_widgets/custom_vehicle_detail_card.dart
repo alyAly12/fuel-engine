@@ -9,12 +9,12 @@ class CustomVehicleDetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: AppColors.homeBox,
         boxShadow: <BoxShadow>[
-          BoxShadow(color: Colors.grey.shade300, blurRadius: 15.0, offset: Offset(0.0, 0.75))
+          BoxShadow(color: Colors.grey.shade300, blurRadius: 15.0, offset: const Offset(0.0, 0.75))
         ],
       ),
       child: Padding(
@@ -35,18 +35,18 @@ class CustomVehicleDetailCard extends StatelessWidget {
                         color: Colors.blue,
                         border: Border.all(color: Colors.grey)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   CustomDetailColumn(title: AppStrings.vehicleNumber, subTitle: '7403 RUA'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   CustomDetailColumn(title: AppStrings.vehicleType, subTitle: 'Skoda'),
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 4),
               child: Divider(
                 thickness: 0.6,
@@ -63,7 +63,7 @@ class CustomVehicleDetailCard extends StatelessWidget {
                     subTitle: '40 LTR',
                     titleColor: AppColors.redColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 80,
                   ),
                   CustomDetailColumn(title: AppStrings.fuelType, subTitle: AppStrings.gas95),

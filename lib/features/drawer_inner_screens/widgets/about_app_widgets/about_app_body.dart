@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets_manager.dart';
 
 class AboutAppBody extends StatelessWidget {
   const AboutAppBody({
@@ -12,16 +12,16 @@ class AboutAppBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 4),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 4),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SvgPicture.asset(AssetsManager.appLogo),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomTextWidget(

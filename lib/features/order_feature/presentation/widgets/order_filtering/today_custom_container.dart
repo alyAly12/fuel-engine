@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:fuelsystem/features/order_feature/presentation/widgets/order_filtering/today_date_container.dart';
+import 'package:fuelsystem/features/order_feature/presentation/widgets/order_filtering/yesterday_container.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_button.dart';
-import 'package:sayarah/features/order_feature/presentation/widgets/order_filtering/today_date_container.dart';
-import 'package:sayarah/features/order_feature/presentation/widgets/order_filtering/yesterday_container.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/functions/pick_time.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/app_strings.dart';
+import '../../../../../core/component/custom_button.dart';
 import 'custom_filter_text_field.dart';
 import 'order_product_list.dart';
 import 'order_type_list.dart';
@@ -49,9 +49,9 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
   bool _todayPressed = false;
   bool _yesterdayPressed = false;
   Future<void> applyFunction() async {
-    final _isValid = _formKey.currentState!.validate();
+    final isValid = _formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
-    if (_isValid) {
+    if (isValid) {
       if (_todayPressed == false && _yesterdayPressed == false) {
         Fluttertoast.showToast(
             msg: "Please select a day",
@@ -61,7 +61,7 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
             backgroundColor: AppColors.appBarColor,
             textColor: Colors.white,
             fontSize: 16.0);
-        return null;
+        return;
       }
       GoRouter.of(context).pushReplacement(AppRoute.kFilterResultScreen);
     }
@@ -90,7 +90,7 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
                 },
                 containerName: AppStrings.today,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               YesterdayContainer(
@@ -107,7 +107,7 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -126,7 +126,7 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Flexible(
@@ -145,7 +145,7 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           CustomTextWidget(
@@ -157,8 +157,8 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
           const SizedBox(
             height: 20,
           ),
-          OrderTypeList(),
-          SizedBox(
+          const OrderTypeList(),
+          const SizedBox(
             height: 30,
           ),
           CustomTextWidget(
@@ -167,11 +167,11 @@ class _TodayCustomTextFieldState extends State<TodayCustomTextField> {
             fontWeight: FontWeight.w500,
             color: AppColors.darkGrey,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          OrderProductList(),
-          SizedBox(
+          const OrderProductList(),
+          const SizedBox(
             height: 80,
           ),
           CustomLoginButton(

@@ -32,7 +32,7 @@ class _OrderTypeListState extends State<OrderTypeList> {
               ? Border.all(color: Colors.transparent, width: 0.7)
               : Border.all(color: AppColors.orderNumberColor, width: 0.7),
         ),
-        SizedBox(
+        const SizedBox(
           width: 3,
         ),
         OrderTypeWidget(

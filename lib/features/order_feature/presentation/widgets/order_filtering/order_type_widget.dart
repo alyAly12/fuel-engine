@@ -23,7 +23,7 @@ class OrderTypeWidget extends StatelessWidget {
         onTap();
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
         decoration: BoxDecoration(
             color: buttonColor, borderRadius: BorderRadius.circular(20), border: border),
         child: Padding(

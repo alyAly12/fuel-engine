@@ -1,10 +1,9 @@
 import 'dart:async';
-
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_request_entity.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_response_entity.dart';
-import 'package:sayarah/features/login_feature/domain/use_case/login_use_case.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../domain/entities/login_request_entity.dart';
+import '../../domain/entities/login_response_entity.dart';
+import '../../domain/use_case/login_use_case.dart';
 
 
 part 'login_event.dart';

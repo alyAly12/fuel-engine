@@ -11,7 +11,7 @@ class CustomDetailsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 7),
+      padding: const EdgeInsets.symmetric(vertical: 7),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(0),
           color: AppColors.backGroundColor,
@@ -19,7 +19,7 @@ class CustomDetailsCard extends StatelessWidget {
             BoxShadow(
               color: Colors.grey.shade300,
               blurRadius: 25,
-              offset: Offset(1, 1),
+              offset: const Offset(1, 1),
               blurStyle: BlurStyle.outer,
             )
           ]),
@@ -35,7 +35,7 @@ class CustomDetailsCard extends StatelessWidget {
                   AssetsManager.gasPump,
                   height: 25,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Column(
@@ -47,7 +47,7 @@ class CustomDetailsCard extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                       color: AppColors.orderNumberColor,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 0.01,
                     ),
                     const CustomTextWidget(
@@ -58,7 +58,7 @@ class CustomDetailsCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 1,
                 ),
                 const Spacer(),
@@ -82,7 +82,7 @@ class CustomDetailsCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 3.5,
             ),
             Row(
@@ -117,7 +117,7 @@ class CustomDetailsCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
                 Column(
@@ -170,7 +170,7 @@ class CustomDetailsCard extends StatelessWidget {
                 SizedBox(
                   width: 30,
                 ),
-                const CustomTextWidget(
+                CustomTextWidget(
                   title: 'Sun Jul 9, 2023 @10:14 am',
                   fontSize: 13,
                   fontWeight: FontWeight.normal,

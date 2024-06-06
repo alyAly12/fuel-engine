@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/auth_validator.dart';
-import 'package:sayarah/core/component/custom_button.dart';
 
+
+import '../../../../../../core/component/custom_button.dart';
+import '../../../../../../core/component/custom_text_widget.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_route.dart';
+import '../../../../../../core/utils/app_strings.dart';
+import '../../../../../../core/utils/auth_validator.dart';
 import 'custom_help_text_form.dart';
 
 class HelpAndSupportBody extends StatefulWidget {
@@ -42,8 +43,8 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
   }
 
   Future<void> sendHelp() async {
-    final _isValid = formKey.currentState!.validate();
-    if (_isValid) {
+    final isValid = formKey.currentState!.validate();
+    if (isValid) {
       GoRouter.of(context).pushReplacement(AppRoute.kCustomSuccessScreen);
     }
   }
@@ -51,12 +52,12 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 40, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 10),
       child: Form(
         key: formKey,
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 3),
+            padding: const EdgeInsets.symmetric(horizontal: 3),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -64,7 +65,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                   decoration: BoxDecoration(
                       boxShadow: [BoxShadow(color: Colors.grey.shade300, blurRadius: 20.0)]),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomTextWidget(
@@ -72,7 +73,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                   color: AppColors.orderNumberColor,
                   fontSize: 15,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 CustomHelpTextForm(
@@ -86,7 +87,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                     return AuthValidator.titleValidator(value);
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomTextWidget(
@@ -94,7 +95,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                   color: AppColors.orderNumberColor,
                   fontSize: 15,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 CustomHelpTextForm(
@@ -109,7 +110,7 @@ class _HelpAndSupportBodyState extends State<HelpAndSupportBody> {
                     return AuthValidator.messageValidator(value);
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 CustomLoginButton(

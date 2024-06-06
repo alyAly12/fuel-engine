@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fuelsystem/features/scan_feature/presentation/widgets/vehicle_details_widgets/vehicle_details_plate_container.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sayarah/core/component/pick_image_function.dart';
-import 'package:sayarah/core/component/custom_button.dart';
-import 'package:sayarah/features/scan_feature/presentation/widgets/vehicle_details_widgets/vehicle_details_plate_container.dart';
 import '../../../../../../core/component/custom_keyboard.dart';
 import '../../../../../../core/component/custom_regular_appbar.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
@@ -10,6 +8,8 @@ import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_strings.dart';
 import '../../../../../../core/utils/assets_manager.dart';
 import '../../../../../../core/utils/auth_validator.dart';
+import '../../../../../core/component/custom_button.dart';
+import '../../../../../core/component/pick_image_function.dart';
 import '../report_issue_widgets/custom_decorated_text_line.dart';
 import 'custom_vehicle_detail_card.dart';
 
@@ -80,7 +80,7 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: PreferredSize(
-            preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
+            preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
             child: CustomRegularAppBar(
               mainTitle: AppStrings.vehicleDetails,
               actionTitle: AppStrings.cancel,
@@ -90,11 +90,11 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 0),
                 child: CustomVehicleDetailCard(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               PickImageFunction(
@@ -110,7 +110,7 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
                 title: AppStrings.vehicleImage,
                 titleColor: AppColors.orderNumberColor,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               CustomTextWidget(
@@ -119,11 +119,11 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w200,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 14),
+                padding: const EdgeInsets.symmetric(horizontal: 14),
                 child: VehicleDetailsPlateContainer(
                   keyForm: formKey,
                   carNum: vehicleNumber,
@@ -144,7 +144,7 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 1,
               ),
               Row(
@@ -154,7 +154,7 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
                     flex: 6,
                     child: CustomDecoratedTextLine(title: AppStrings.number),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   Flexible(
@@ -163,11 +163,11 @@ class _NotTheSameVehicleScreenState extends State<NotTheSameVehicleScreen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: CustomLoginButton(
                     textWeight: FontWeight.w500,
                     textSize: 15,

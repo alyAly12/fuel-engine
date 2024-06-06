@@ -1,8 +1,7 @@
 import 'dart:convert';
-
-import 'package:sayarah/core/services/network_service.dart';
-import 'package:sayarah/core/utils/endpoints.dart';
-import 'package:sayarah/core/utils/errors/exceptions.dart';
+import '../../../../core/services/network_service.dart';
+import '../../../../core/utils/endpoints.dart';
+import '../../../../core/utils/errors/exceptions.dart';
 import '../../domain/entities/pairing_request_entity.dart';
 import '../models/pairing_response_model.dart';
 

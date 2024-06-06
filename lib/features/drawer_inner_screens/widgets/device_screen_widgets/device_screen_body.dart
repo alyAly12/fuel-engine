@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/device_screen_widgets/device_screen_header.dart';
+
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/assets_manager.dart';
+import 'device_screen_header.dart';
+
 
 class DeviceScreenBody extends StatelessWidget {
   const DeviceScreenBody({super.key});
@@ -15,19 +17,19 @@ class DeviceScreenBody extends StatelessWidget {
       Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          DeviceScreenHeader(),
-          SizedBox(
+          const DeviceScreenHeader(),
+          const SizedBox(
             height: 60,
           ),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            decoration: BoxDecoration(color: Colors.white),
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            decoration: const BoxDecoration(color: Colors.white),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.calendar_month,
                       color: AppColors.pieChartColor,
                       size: 30,
@@ -40,7 +42,7 @@ class DeviceScreenBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                CustomTextWidget(
+                const CustomTextWidget(
                   title: '2 may 2013 12:40 PM',
                   color: AppColors.darkGrey,
                   fontSize: 13,

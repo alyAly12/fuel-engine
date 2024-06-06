@@ -11,8 +11,8 @@ class SignUpView extends StatelessWidget {
       onTap: () {
         FocusScope.of(context).unfocus();
       },
-      child: Scaffold(
-        body: const SignUpViewBody(),
+      child: const Scaffold(
+        body: SignUpViewBody(),
       ),
     );
   }

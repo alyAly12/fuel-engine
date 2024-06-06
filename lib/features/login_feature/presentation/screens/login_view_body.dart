@@ -6,20 +6,20 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_device_info_plus/my_device_info_plus.dart';
-import 'package:sayarah/core/services/service_locator.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_request_entity.dart';
-import 'package:sayarah/features/login_feature/presentation/bloc/login_bloc.dart';
-import 'package:sayarah/core/component/custom_button.dart';
-import 'package:sayarah/features/login_feature/presentation/screens/custom_login_container.dart';
-import 'package:sayarah/features/login_feature/presentation/screens/custom_login_field.dart';
-import 'package:sayarah/features/login_feature/presentation/screens/login_header.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../../../core/component/subtitle_text_widget.dart';
 import '../../../../../../../core/utils/app_route.dart';
 import '../../../../../../../core/utils/auth_validator.dart';
+import '../../../../core/component/custom_button.dart';
+import '../../../../core/services/service_locator.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/assets_manager.dart';
+import '../../domain/entities/login_request_entity.dart';
+import '../bloc/login_bloc.dart';
+import 'custom_login_container.dart';
+import 'custom_login_field.dart';
+import 'login_header.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody(
@@ -97,7 +97,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         deviceCode: widget.deviceCode,
         providerCode: widget.providerCode,
         pinCode: pinController.text,
-        deviceOs: '${_platform}, Build ${_os_version}',
+        deviceOs: '$_platform, Build $_os_version',
         lat: position.latitude,
         lng: position.longitude,
       )));
@@ -115,7 +115,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
     Size size = MediaQuery.of(context).size;
     return Animate(
       child: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -197,7 +197,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                         },
                         builder: (context, state) {
                           return loading
-                              ? Center(child: CircularProgressIndicator())
+                              ? const Center(child: CircularProgressIndicator())
                               : CustomLoginButton(
                                   buttonHeight: size.width * 0.15,
                                   textSize: 17,

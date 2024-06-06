@@ -55,7 +55,7 @@ class VehicleDetailsPlateContainer extends StatelessWidget {
                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                     )),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
                   child: Column(
                     children: [
                       SvgPicture.asset(AssetsManager.ksaLogo),
@@ -66,7 +66,7 @@ class VehicleDetailsPlateContainer extends StatelessWidget {
                 Flexible(
                   flex: 2,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 2),
+                    padding: const EdgeInsets.symmetric(vertical: 2),
                     child: CustomIssueTextField(
                       onTapLetter: () {
                         // showModalBottomSheet(

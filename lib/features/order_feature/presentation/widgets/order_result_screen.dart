@@ -11,15 +11,15 @@ class OrderFilterResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: AppColors.backGroundColor,
       appBar: PreferredSize(
-          preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+          preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
           child: CustomRegularAppBar(
             mainTitle: AppStrings.orders,
             actionTitle: AppStrings.back,
           )),
-      body: OrderResultBody(),
+      body: const OrderResultBody(),
     );
   }
 }

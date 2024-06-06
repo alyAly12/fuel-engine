@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_regular_appbar.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/complaint_screen_widget/complaint_screen_body.dart';
+import 'package:fuelsystem/features/drawer_inner_screens/widgets/complaint_screen_widget/complaint_screen_body.dart';
+
+import '../../core/component/custom_regular_appbar.dart';
+import '../../core/utils/app_strings.dart';
 
 class ComplaintScreen extends StatelessWidget {
   const ComplaintScreen({super.key});
@@ -14,12 +15,12 @@ class ComplaintScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: PreferredSize(
-            preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
+            preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
             child: CustomRegularAppBar(
               mainTitle: AppStrings.complain,
               actionTitle: AppStrings.back,
             )),
-        body: SingleChildScrollView(reverse: true, child: ComplaintScreenBody()),
+        body: const SingleChildScrollView(reverse: true, child: ComplaintScreenBody()),
       ),
     );
   }

@@ -19,10 +19,10 @@ class NotificationItem extends StatelessWidget {
             AssetsManager.danger,
             height: 20,
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomTextWidget(
@@ -36,8 +36,8 @@ class NotificationItem extends StatelessWidget {
               )
             ],
           ),
-          Spacer(),
-          CustomTextWidget(title: '2 days ago', fontSize: 13, color: AppColors.lightTitleColor)
+          const Spacer(),
+          const CustomTextWidget(title: '2 days ago', fontSize: 13, color: AppColors.lightTitleColor)
         ],
       ),
     );

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_drawer.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/core/component/custom_button.dart';
+
 import '../../../../../../core/component/custom_regular_appbar.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/app_strings.dart';
 import '../../../../../../core/utils/auth_validator.dart';
+import '../../../../../core/component/custom_button.dart';
+import '../../../../../core/component/custom_drawer.dart';
+import '../../../../../core/utils/assets_manager.dart';
 import 'custom_meter_container.dart';
 import 'custom_vehicle_detail_card.dart';
 import 'custom_vehicle_pin_code.dart';
@@ -65,10 +66,10 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         backgroundColor: AppColors.backGroundColor,
         appBar: PreferredSize(
-            preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+            preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
             child: CustomRegularAppBar(
               mainTitle: AppStrings.vehicleDetails,
               actionTitle: AppStrings.cancel,
@@ -78,8 +79,8 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
             key: formKey,
             child: Column(
               children: [
-                CustomVehicleDetailCard(),
-                SizedBox(
+                const CustomVehicleDetailCard(),
+                const SizedBox(
                   height: 50,
                 ),
                 Padding(
@@ -94,7 +95,7 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomMeterContainer(
@@ -110,7 +111,7 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
                   },
                   image: AssetsManager.gasoline,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 Padding(
@@ -125,7 +126,7 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 1,
                 ),
                 CustomMeterContainer(
@@ -141,11 +142,11 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
                   },
                   image: AssetsManager.odMeter,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: CustomLoginButton(
                       buttonHeight: 60,
                       textSize: 15,
@@ -153,7 +154,7 @@ class _TheSameVehicleScreenState extends State<TheSameVehicleScreen> {
                       onPressed: () {
                         submitVehicle();
                       },
-                      color: (fuelController.text.isEmpty && fuelController.text.length < 1 ||
+                      color: (fuelController.text.isEmpty && fuelController.text.isEmpty ||
                               odooController.text.isEmpty && odooController.text.length < 3)
                           ? AppColors.orderNumberColor
                           : AppColors.redColor,

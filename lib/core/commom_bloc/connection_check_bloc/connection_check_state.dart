@@ -3,7 +3,7 @@ part of 'connection_check_bloc.dart';
 @immutable
 abstract class ConnectionCheckState {
   final bool isDialogShown;
-  ConnectionCheckState({required this.isDialogShown});
+  const ConnectionCheckState({required this.isDialogShown});
 }
 
 class ConnectionCheckInitial extends ConnectionCheckState {

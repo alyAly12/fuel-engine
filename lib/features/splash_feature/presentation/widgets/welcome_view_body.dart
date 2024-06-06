@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:fuelsystem/features/splash_feature/presentation/widgets/welcome_page_one.dart';
+import 'package:fuelsystem/features/splash_feature/presentation/widgets/welcome_page_two.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/features/splash_feature/presentation/widgets/welcome_page_one.dart';
-import 'package:sayarah/features/splash_feature/presentation/widgets/welcome_page_two.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
 import 'custom_welcome_button.dart';
 
 class WelcomeViewBody extends StatefulWidget {
@@ -30,7 +30,7 @@ class _WelcomeViewBodyState extends State<WelcomeViewBody> {
 
   Future<void> checkRegister() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    bool isRegister = await pref.getBool(AppStrings.isRegister) ?? false;
+    bool isRegister = pref.getBool(AppStrings.isRegister) ?? false;
     if (isRegister) {
       GoRouter.of(context).pushReplacement(AppRoute.kLoginView);
     }

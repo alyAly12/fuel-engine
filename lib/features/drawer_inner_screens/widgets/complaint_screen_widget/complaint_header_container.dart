@@ -10,7 +10,7 @@ class ComplaintHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       decoration:
           BoxDecoration(color: AppColors.orderNumberColor, borderRadius: BorderRadius.circular(12)),
       child: Row(
@@ -24,10 +24,10 @@ class ComplaintHeaderContainer extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              CustomTextWidget(
+              const CustomTextWidget(
                 title: 'F00123',
                 color: Colors.white,
                 fontSize: 17,
@@ -35,7 +35,7 @@ class ComplaintHeaderContainer extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             width: 70,
           ),
           Column(
@@ -47,10 +47,10 @@ class ComplaintHeaderContainer extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              CustomTextWidget(
+              const CustomTextWidget(
                 title: '7403 RUA',
                 color: Colors.white,
                 fontSize: 17,

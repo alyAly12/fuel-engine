@@ -7,7 +7,7 @@ showToast() {
       borderRadius: BorderRadius.circular(25.0),
       color: Colors.greenAccent,
     ),
-    child: Row(
+    child: const Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(Icons.check),

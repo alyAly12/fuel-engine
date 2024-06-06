@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-
 import '../../../../core/component/subtitle_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
 import '../widgets/welcome_view_body.dart';
 
 class WelcomeView extends StatelessWidget {

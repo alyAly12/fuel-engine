@@ -42,7 +42,7 @@ class CustomIssueTextField extends StatelessWidget {
       inputFormatters: inputFormatters,
       textCapitalization: TextCapitalization.characters,
       onChanged: (txt) {},
-      style: TextStyle(
+      style: const TextStyle(
           color: AppColors.greyColor,
           fontSize: 20,
           letterSpacing: 4.0,
@@ -51,20 +51,20 @@ class CustomIssueTextField extends StatelessWidget {
       decoration: InputDecoration(
           hintText: hintText,
           hintStyle:
-              TextStyle(color: AppColors.greyColor, fontSize: 28, fontWeight: FontWeight.w500),
-          counter: Offstage(),
+              const TextStyle(color: AppColors.greyColor, fontSize: 28, fontWeight: FontWeight.w500),
+          counter: const Offstage(),
           isDense: true,
-          contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
-          enabledBorder: OutlineInputBorder(
+          contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+          enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8)),
               borderSide: BorderSide(color: AppColors.issueBorderColor)),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8)),
               borderSide: BorderSide(color: AppColors.issueBorderColor)),
-          errorBorder: OutlineInputBorder(
+          errorBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8)),
               borderSide: BorderSide(color: AppColors.redColor)),
-          focusedErrorBorder: OutlineInputBorder(
+          focusedErrorBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8)),
               borderSide: BorderSide(color: AppColors.redColor))),
     );

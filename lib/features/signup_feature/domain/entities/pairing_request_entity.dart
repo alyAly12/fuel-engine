@@ -20,7 +20,7 @@ class PairingRequestEntity {
       });
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['provider_code'] = providerCode;
     data['device_code'] = deviceCode;
     data['device_secret'] = deviceSecret;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+import '../utils/app_colors.dart';
 import '../utils/app_dialog.dart';
 import 'custom_dotted_camera_container.dart';
 import 'dart:io';
@@ -46,7 +46,7 @@ class PickImageFunction extends StatelessWidget {
             child: Container(
               width: 80,
               height: 80,
-              decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.transparent),
+              decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.transparent),
               child: ClipOval(
                 child: Image.file(
                   File(file!),

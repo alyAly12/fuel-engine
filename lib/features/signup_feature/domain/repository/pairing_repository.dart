@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:sayarah/core/exceptions/failure.dart';
+import '../../../../core/exceptions/failure.dart';
 import '../entities/pairing_request_entity.dart';
 import '../entities/pairing_response_entity.dart';
 

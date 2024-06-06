@@ -25,7 +25,7 @@ class TodayDateContainer extends StatelessWidget {
         onTap();
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
         decoration: BoxDecoration(
             color: buttonColor, borderRadius: BorderRadius.circular(20), border: border),
         child: Padding(

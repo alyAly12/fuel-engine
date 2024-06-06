@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:platform_device_id_v3/platform_device_id.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 import '../../../domain/entities/pairing_request_entity.dart';
 import '../../../domain/entities/pairing_response_entity.dart';
 import '../../../domain/use_case/pairing_use_case.dart';
@@ -30,12 +30,12 @@ class PairingBloc extends Bloc<PairingEvent, PairingState> {
 
   Future<FutureOr<void>> _redeemingId(
       GetDeviceIdNumberEvent event, Emitter<PairingState> emit) async {
-    String? _deviceId;
+    String? deviceId0;
     var deviceId = await PlatformDeviceId.getDeviceId;
-    _deviceId = deviceId;
-    emit(GetDeviceIdNumberState(_deviceId!));
-    print(_deviceId);
-    return _deviceId;
+    deviceId0 = deviceId;
+    emit(GetDeviceIdNumberState(deviceId0!));
+    print(deviceId0);
+    return deviceId0;
   }
 
   @override

@@ -1,9 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fuelsystem/features/scan_feature/presentation/widgets/scan_screen_widgets/start_scan_button.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sayarah/features/scan_feature/presentation/widgets/scan_screen_widgets/start_scan_button.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/functions/read_nfc_tag.dart';
 import '../../../../../../core/utils/app_colors.dart';
@@ -28,7 +28,7 @@ class _ScanHeaderContainerState extends State<ScanHeaderContainer> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 50, horizontal: 1),
+      padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 1),
       child: GestureDetector(
         onTap: () {
           GoRouter.of(context).push(AppRoute.kVehicleDetailScreen);

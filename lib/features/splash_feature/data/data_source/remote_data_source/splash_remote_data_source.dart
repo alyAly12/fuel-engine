@@ -1,8 +1,8 @@
 
-import 'package:sayarah/core/utils/errors/exceptions.dart';
-import 'package:sayarah/features/splash_feature/domain/entity/splash_response_entity.dart';
 import '../../../../../core/services/network_service.dart';
 import '../../../../../core/utils/endpoints.dart';
+import '../../../../../core/utils/errors/exceptions.dart';
+import '../../../domain/entity/splash_response_entity.dart';
 import '../../models/splash_response_model.dart';
 
 abstract class SplashRemoteDataSource {

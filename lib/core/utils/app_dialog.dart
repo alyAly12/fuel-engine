@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+
 import '../component/custom_text_widget.dart';
 import '../component/subtitle_text_widget.dart';
+import 'app_colors.dart';
+import 'assets_manager.dart';
 
 class DialogsServices {
   static Future<void> appDialog(
@@ -20,7 +21,7 @@ class DialogsServices {
             content: SizedBox(
               child: SvgPicture.asset(AssetsManager.danger),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 2),
+            contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 2),
             title: Center(
                 child: CustomTextWidget(
               title: title,
@@ -42,8 +43,8 @@ class DialogsServices {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: SubTitleWidget(
                               subTitle: 'Cancel',
                               color: Color(0xff545e69),
@@ -52,7 +53,7 @@ class DialogsServices {
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
                   TextButton(
@@ -63,15 +64,15 @@ class DialogsServices {
                       child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8), color: AppColors.activeColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(16.0),
                             child: SubTitleWidget(
                               subTitle: 'Change',
                               color: Colors.white,
                               fontSize: 10,
                             ),
                           ))),
-                  SizedBox(
+                  const SizedBox(
                     width: 6,
                   ),
                 ],
@@ -89,9 +90,9 @@ class DialogsServices {
           return AlertDialog(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            content: CustomTextWidget(title: 'Kindly check connection tools'),
-            contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 2),
-            title: Column(
+            content: const CustomTextWidget(title: 'Kindly check connection tools'),
+            contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 2),
+            title: const Column(
               children: [
                 CustomTextWidget(
                   title: 'internet connection',
@@ -118,7 +119,7 @@ class DialogsServices {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Visibility(
@@ -131,8 +132,8 @@ class DialogsServices {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: SubTitleWidget(
                               subTitle: 'Cancel',
                               color: Color(0xff545e69),
@@ -141,7 +142,7 @@ class DialogsServices {
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
                   TextButton(
@@ -152,8 +153,8 @@ class DialogsServices {
                       child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8), color: AppColors.activeColor),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(16.0),
                             child: SubTitleWidget(
                               subTitle: 'Active connection',
                               color: AppColors.appBarColor,

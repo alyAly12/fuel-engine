@@ -1,7 +1,8 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+
+import '../utils/app_colors.dart';
 
 class CustomDottedCameraContainer extends StatelessWidget {
   const CustomDottedCameraContainer({
@@ -25,7 +26,7 @@ class CustomDottedCameraContainer extends StatelessWidget {
         Container(
             height: heightSize ?? 100,
             width: widthSize ?? 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white30,
               shape: BoxShape.circle,
             ),
@@ -33,7 +34,7 @@ class CustomDottedCameraContainer extends StatelessWidget {
               color: color ?? Colors.white,
               strokeWidth: 2,
               strokeCap: StrokeCap.round,
-              dashPattern: [3, 5],
+              dashPattern: const [3, 5],
               borderType: BorderType.Circle,
               radius: const Radius.circular(8),
               padding: const EdgeInsets.all(8),
@@ -51,7 +52,7 @@ class CustomDottedCameraContainer extends StatelessWidget {
                     ),
                   )),
             )),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
       ],

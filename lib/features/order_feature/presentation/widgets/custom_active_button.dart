@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-
 import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_strings.dart';
 
 class CustomActiveButton extends StatelessWidget {
   const CustomActiveButton({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_drawer.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
 import '../../../../../../core/component/custom_regular_appbar.dart';
+import '../../../../../core/component/custom_drawer.dart';
+import '../../../../../core/utils/app_strings.dart';
 import 'orders_details_body.dart';
 
 class OrdersDetail extends StatelessWidget {
@@ -10,10 +10,10 @@ class OrdersDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-          preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+          preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
           child: CustomRegularAppBar(
             mainTitle: AppStrings.ordersDetail,
             actionTitle: AppStrings.back,

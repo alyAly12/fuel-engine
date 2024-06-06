@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
 
 import '../../../../../core/component/custom_text_widget.dart';
+import '../utils/app_colors.dart';
 
 class CustomLoginButton extends StatelessWidget {
   const CustomLoginButton({
@@ -35,7 +35,7 @@ class CustomLoginButton extends StatelessWidget {
         height: buttonHeight,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.deepRed ?? color,
+              backgroundColor: color??AppColors.deepRed ,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6)),
             ),
@@ -51,7 +51,7 @@ class CustomLoginButton extends StatelessWidget {
                 ),
                 Visibility(
                     visible: showIcon,
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_forward_sharp,
                       color: Colors.white,
                       size: 20,

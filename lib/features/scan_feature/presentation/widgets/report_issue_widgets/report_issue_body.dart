@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fuelsystem/features/scan_feature/presentation/widgets/report_issue_widgets/report_issue_list.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/component/custom_button.dart';
-import 'package:sayarah/features/scan_feature/presentation/widgets/report_issue_widgets/report_issue_list.dart';
 import '../../../../../../core/component/custom_keyboard.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/auth_validator.dart';
+import '../../../../../core/component/custom_button.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
 import 'custom_issue_container.dart';
 
 class ReportIssueViewBody extends StatefulWidget {
@@ -65,7 +65,7 @@ class _ReportIssueViewBodyState extends State<ReportIssueViewBody> {
     return SingleChildScrollView(
       reverse: true,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 1, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -90,7 +90,7 @@ class _ReportIssueViewBodyState extends State<ReportIssueViewBody> {
               keyBoardLetterType: TextInputType.text,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 14),
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 14),
               child: CustomTextWidget(
                 title: AppStrings.enterIssue,
                 color: AppColors.appBarColor,
@@ -98,12 +98,12 @@ class _ReportIssueViewBodyState extends State<ReportIssueViewBody> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 14),
               child: ReportIssueList(),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 80),
+              padding: const EdgeInsets.symmetric(vertical: 80),
               child: CustomLoginButton(
                   textSize: 17,
                   textWeight: FontWeight.w500,

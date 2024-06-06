@@ -1,5 +1,7 @@
-import 'package:sayarah/features/splash_feature/data/models/splash_data_model.dart';
-import 'package:sayarah/features/splash_feature/domain/entity/splash_response_entity.dart';
+
+import 'package:fuelsystem/features/splash_feature/data/models/splash_data_model.dart';
+
+import '../../domain/entity/splash_response_entity.dart';
 
 class SplashResponseModel extends SplashResponseEntity {
   SplashResponseModel({data, message, error, status}) : super(data, message, error, status);

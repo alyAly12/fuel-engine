@@ -1,10 +1,11 @@
 import 'dart:convert';
 
-import 'package:sayarah/core/services/network_service.dart';
-import 'package:sayarah/core/utils/endpoints.dart';
-import 'package:sayarah/core/utils/errors/exceptions.dart';
-import 'package:sayarah/features/login_feature/data/models/login_response_model.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_request_entity.dart';
+import '../../../../core/services/network_service.dart';
+import '../../../../core/utils/endpoints.dart';
+import '../../../../core/utils/errors/exceptions.dart';
+import '../../domain/entities/login_request_entity.dart';
+import '../models/login_response_model.dart';
+
 
 abstract class LoginDataSource {
   Future<LoginResponseModel> login(LoginRequestEntity loginRequestEntity);

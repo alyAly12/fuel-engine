@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_regular_appbar.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/about_app_widgets/about_app_body.dart';
+import 'package:fuelsystem/features/drawer_inner_screens/widgets/about_app_widgets/about_app_body.dart';
 import '../../core/component/custom_drawer.dart';
+import '../../core/component/custom_regular_appbar.dart';
 import '../../core/utils/app_colors.dart';
 import '../../core/utils/app_strings.dart';
 
@@ -11,12 +11,12 @@ class AboutAppScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: AppColors.backGroundColor,
       appBar: PreferredSize(
-          preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
+          preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight),
           child: CustomRegularAppBar(mainTitle: AppStrings.aboutApp, actionTitle: AppStrings.back)),
-      body: AboutAppBody(),
+      body: const AboutAppBody(),
     );
   }
 }

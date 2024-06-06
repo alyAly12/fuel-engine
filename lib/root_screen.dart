@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
 import 'core/commom_bloc/connection_check_bloc/connection_check_bloc.dart';
+import 'core/utils/app_colors.dart';
 import 'core/utils/app_route.dart';
+import 'core/utils/assets_manager.dart';
 import 'features/home_feature/presentation/screens/home_view.dart';
 import 'features/order_feature/presentation/screens/order_view.dart';
 import 'features/setting_feature/presentation/screens/settings_view.dart';
@@ -44,7 +44,7 @@ class _RootScreenState extends State<RootScreen> {
               width: 60,
               height: 60,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 1),
+                padding: const EdgeInsets.only(bottom: 1),
                 child: FloatingActionButton(
                   onPressed: () {
                     GoRouter.of(context).pushReplacement(AppRoute.kScanView);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+
 
 class SettingList extends StatelessWidget {
   const SettingList({super.key, required this.title, this.onTap});
@@ -16,11 +18,11 @@ class SettingList extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(4.0),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: CustomTextWidget(

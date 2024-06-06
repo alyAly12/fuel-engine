@@ -1,7 +1,7 @@
 import 'package:location/location.dart';
 
 Future<void> activateGps() async {
-  Location location = new Location();
+  Location location = Location();
   bool isOn = await location.serviceEnabled();
   if (!isOn) {
     bool isturnedon = await location.requestService();

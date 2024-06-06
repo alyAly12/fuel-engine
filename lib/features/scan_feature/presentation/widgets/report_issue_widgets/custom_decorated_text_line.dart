@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
 import '../../../../../../core/component/subtitle_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 class CustomDecoratedTextLine extends StatelessWidget {
   const CustomDecoratedTextLine({super.key, required this.title});
@@ -15,7 +15,7 @@ class CustomDecoratedTextLine extends StatelessWidget {
             flex: 3,
             child: Container(
               height: 0.1,
-              decoration: BoxDecoration(color: AppColors.orderNumberColor),
+              decoration: const BoxDecoration(color: AppColors.orderNumberColor),
             ),
           ),
           Expanded(
@@ -34,7 +34,7 @@ class CustomDecoratedTextLine extends StatelessWidget {
             flex: 2,
             child: Container(
               height: 0.1,
-              decoration: BoxDecoration(color: AppColors.orderNumberColor),
+              decoration: const BoxDecoration(color: AppColors.orderNumberColor),
             ),
           ),
         ],

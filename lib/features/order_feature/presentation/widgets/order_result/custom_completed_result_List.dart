@@ -18,10 +18,10 @@ class CustomCompletedResultList extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 1, horizontal: 0.2),
+                  padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 0.2),
                   child: Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             topRight: Radius.circular(12), topLeft: Radius.circular(12)),
                         color: Colors.white,
                         boxShadow: [
@@ -33,19 +33,19 @@ class CustomCompletedResultList extends StatelessWidget {
                         ]),
                     child: ListView.separated(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: CompletedItemList.completedOrderList.length,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 1, vertical: 1.2),
+                          padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 1.2),
                           child: CompletedOrdersItem(
                               image: CompletedItemList.completedOrderList[index].image,
                               color: CompletedItemList.completedOrderList[index].color),
                         );
                       },
                       separatorBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Divider(
                             thickness: 0.5,
                             color: Colors.grey,

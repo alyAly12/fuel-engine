@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/core/component/custom_button.dart';
+
 import '../../../../../../core/component/custom_keyboard.dart';
 import '../../../../../../core/component/pick_image_function.dart';
 import '../../../../../../core/utils/app_dialog.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/auth_validator.dart';
+import '../../../../../core/component/custom_button.dart';
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/assets_manager.dart';
 import '../report_issue_widgets/custom_decorated_text_line.dart';
 import '../vehicle_details_widgets/vehicle_details_plate_container.dart';
 
@@ -85,15 +86,15 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
   }
 
   Future<void> upLoadImage() async {
-    final _isValid = formKey.currentState!.validate();
-    if (_isValid && _pickedImage != null && _pickedImage2 != null) {
+    final isValid = formKey.currentState!.validate();
+    if (isValid && _pickedImage != null && _pickedImage2 != null) {
       GoRouter.of(context).pushReplacement(AppRoute.kSuccessRegisterScreen);
     }
     if (_pickedImage == null || _pickedImage2 == null) {
       DialogsServices.appDialog(context: context, title: 'Please select an image', fct: () {});
       return;
     } else {
-      return null;
+      return;
     }
   }
 
@@ -102,13 +103,13 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
     return SingleChildScrollView(
       reverse: true,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 12),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SvgPicture.asset(AssetsManager.danger),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Align(
@@ -120,7 +121,7 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                 color: AppColors.appBarColor,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Align(
@@ -139,7 +140,7 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                 color: AppColors.lightTitleColor,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             CustomTextWidget(
@@ -147,7 +148,7 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
               color: AppColors.darkGrey,
               fontSize: 15,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             VehicleDetailsPlateContainer(
@@ -169,7 +170,7 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                 vehicleNumber.text == value;
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 1,
             ),
             Row(
@@ -179,7 +180,7 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                   flex: 5,
                   child: CustomDecoratedTextLine(title: AppStrings.number),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 Flexible(
@@ -188,11 +189,11 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 6),
+              padding: const EdgeInsets.symmetric(horizontal: 6),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -225,11 +226,11 @@ class _VehicleRegistrationBodyState extends State<VehicleRegistrationBody> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 1),
+              padding: const EdgeInsets.symmetric(horizontal: 1),
               child: CustomLoginButton(
                   textColor: Colors.white,
                   buttonHeight: 55,

@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+
 import 'package:toastification/toastification.dart';
 
+import '../utils/app_colors.dart';
+import '../utils/app_route.dart';
+import '../utils/assets_manager.dart';
 import 'custom_text_widget.dart';
 
 class GlobalNavigator {
@@ -21,25 +22,25 @@ class GlobalNavigator {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: bkColor,
-          contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 2),
-          content: Container(
+          contentPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 2),
+          content: SizedBox(
             height: 5,
             width: double.infinity,
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(text),
-                SizedBox(
+                const SizedBox(
                   width: 2,
                 ),
                 Icon(
                   goIcon,
                   color: iconColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 1,
                 ),
-                VerticalDivider(
+                const VerticalDivider(
                   thickness: 1,
                   color: Colors.grey,
                 ),
@@ -47,7 +48,7 @@ class GlobalNavigator {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: Text('ok'))
+                    child: const Text('ok'))
               ],
             ),
           ),
@@ -78,36 +79,36 @@ class GlobalNavigator {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(AssetsManager.location),
-                SizedBox(
+                const SizedBox(
                   width: 2,
                 ),
                 SvgPicture.asset(AssetsManager.nfcMark),
-                SizedBox(
+                const SizedBox(
                   width: 2,
                 ),
                 SvgPicture.asset(AssetsManager.fiveG),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Connection Activated', style: TextStyle(color: AppColors.pieChartColor,fontSize: 14)),
-                    Text(text, style: TextStyle(color: AppColors.appBarColor,fontSize: 14))
+                    const Text('Connection Activated', style: TextStyle(color: AppColors.pieChartColor,fontSize: 14)),
+                    Text(text, style: const TextStyle(color: AppColors.appBarColor,fontSize: 14))
                   ],
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Align(
                   alignment:Alignment.bottomCenter,
                     child: Icon(icon,color: iconColor,)),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
-                VerticalDivider(thickness: 1,color: AppColors.blackCoat),
-                SizedBox(
+                const VerticalDivider(thickness: 1,color: AppColors.blackCoat),
+                const SizedBox(
                   width: 20,
                 ),
-                Align(
+                const Align(
                     alignment: Alignment.center,
                     child: Text('Ok',style: TextStyle(fontSize: 12),))
               ],
@@ -198,10 +199,10 @@ class GlobalInternetNavigator {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset(AssetsManager.noConnectionLottie,width: 129,height: 129),
-            SizedBox(height: 50,),
-            CustomTextWidget(title: 'no connection found',color: AppColors.redColor,fontSize: 20,),
-            SizedBox(height: 20,),
-            CustomTextWidget(title: 'kindly check data connection or WiFi network',color: AppColors.appBarColor,fontSize: 14,)
+            const SizedBox(height: 50,),
+            const CustomTextWidget(title: 'no connection found',color: AppColors.redColor,fontSize: 20,),
+            const SizedBox(height: 20,),
+            const CustomTextWidget(title: 'kindly check data connection or WiFi network',color: AppColors.appBarColor,fontSize: 14,)
           ],);
       },
     );

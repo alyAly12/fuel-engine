@@ -45,7 +45,7 @@ class CustomIssueContainer extends StatelessWidget {
         elevation: 1,
         shadowColor: Colors.grey.shade300,
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 14),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -55,7 +55,7 @@ class CustomIssueContainer extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: AppColors.darkGrey,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               Container(
@@ -80,7 +80,7 @@ class CustomIssueContainer extends StatelessWidget {
                               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                             )),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 1.5),
+                          padding: const EdgeInsets.symmetric(horizontal: 1.5),
                           child: Column(
                             children: [
                               SvgPicture.asset(AssetsManager.ksaLogo),
@@ -108,7 +108,7 @@ class CustomIssueContainer extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
               Row(
@@ -118,7 +118,7 @@ class CustomIssueContainer extends StatelessWidget {
                     flex: 6,
                     child: CustomDecoratedTextLine(title: AppStrings.number),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   Flexible(

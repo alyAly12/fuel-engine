@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-
+import '../../../../core/utils/app_colors.dart';
 import 'custom_active_button.dart';
 import 'custom_active_order_list.dart';
 import 'custom_complete_order_list.dart';
@@ -39,11 +38,11 @@ class _OrderViewBodyState extends State<OrderViewBody> with TickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 1),
+      padding: const EdgeInsets.only(top: 1),
       child: Column(
         children: [
           TabBar(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             tabAlignment: TabAlignment.fill,
             splashFactory: NoSplash.splashFactory,
             unselectedLabelColor: AppColors.lightTitleColor,
@@ -61,12 +60,12 @@ class _OrderViewBodyState extends State<OrderViewBody> with TickerProviderStateM
             controller: controller,
             tabs: tabItems,
           ),
-          SizedBox(
+          const SizedBox(
             height: 0,
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: TabBarView(clipBehavior: Clip.none, controller: controller, children: tabView),
             ),
           )

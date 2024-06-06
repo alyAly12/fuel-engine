@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sayarah/core/component/custom_rounded_column_button.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+
+import '../../../../../core/component/custom_rounded_column_button.dart';
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/assets_manager.dart';
+
 
 class StartFuelVehicleBody extends StatelessWidget {
   const StartFuelVehicleBody({super.key});
@@ -29,7 +31,7 @@ class StartFuelVehicleBody extends StatelessWidget {
             right: 0,
             child: TextButton(
                 onPressed: () {},
-                child: CustomTextWidget(
+                child: const CustomTextWidget(
                   title: 'Back',
                   color: Colors.white,
                   fontSize: 15,
@@ -39,7 +41,7 @@ class StartFuelVehicleBody extends StatelessWidget {
           child: Column(
             children: [
               Lottie.asset(AssetsManager.fuelStation),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               CustomTextWidget(
@@ -47,11 +49,11 @@ class StartFuelVehicleBody extends StatelessWidget {
                 fontSize: 19,
                 fontWeight: FontWeight.w500,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 90),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 90),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

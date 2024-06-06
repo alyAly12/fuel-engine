@@ -1,4 +1,5 @@
-import 'package:sayarah/features/splash_feature/data/models/splash_data_model.dart';
+
+import '../../data/models/splash_data_model.dart';
 
 class SplashResponseEntity {
   SplashDataModel? splashData;

@@ -2,10 +2,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-
+import '../utils/app_colors.dart';
 import '../utils/app_consts.dart';
+import 'custom_text_widget.dart';
 final dialogContextCompleter = Completer<BuildContext>();
 
 void InternetBlocUI(BuildContext context)async{
@@ -21,10 +20,10 @@ void InternetBlocUI(BuildContext context)async{
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
         SvgPicture.asset('assets/images/4g.svg',height: 80,),
-        SizedBox(height: 50,),
-        CustomTextWidget(title: 'no connection found',color: AppColors.redColor,fontSize: 16,),
-          SizedBox(height: 20,),
-        CustomTextWidget(title: 'kindly check data connection or WiFi network',color: AppColors.appBarColor,fontSize: 13,)
+        const SizedBox(height: 50,),
+        const CustomTextWidget(title: 'no connection found',color: AppColors.redColor,fontSize: 16,),
+          const SizedBox(height: 20,),
+        const CustomTextWidget(title: 'kindly check data connection or WiFi network',color: AppColors.appBarColor,fontSize: 13,)
       ],);
     },
   );

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-
 import '../../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
 import 'custom_detail_card.dart';
 import 'last_visit_detail.dart';
 
@@ -19,7 +18,7 @@ class OrdersDetailsBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const CustomDetailsCard(),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Align(
@@ -40,17 +39,17 @@ class OrdersDetailsBody extends StatelessWidget {
                   SliverToBoxAdapter(
                     child: ListView.separated(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 5,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-                          child: const LastVisitDetailWidget(),
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                          child: LastVisitDetailWidget(),
                         );
                       },
                       separatorBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
                           child: Divider(
                             thickness: 0.5,
                             color: Colors.grey,

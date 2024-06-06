@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sayarah/core/component/custom_rounded_column_button.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/utils/app_route.dart';
 import '../../../../../../core/utils/app_strings.dart';
 import '../../../../../../core/utils/assets_manager.dart';
+import '../../../../../core/component/custom_rounded_column_button.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 class ConfirmSuccessScreen extends StatelessWidget {
   const ConfirmSuccessScreen({super.key});
@@ -29,7 +30,7 @@ class ConfirmSuccessScreen extends StatelessWidget {
             child: Column(
               children: [
                 Lottie.asset(AssetsManager.check),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomTextWidget(
@@ -38,11 +39,11 @@ class ConfirmSuccessScreen extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

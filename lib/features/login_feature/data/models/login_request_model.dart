@@ -1,4 +1,5 @@
-import 'package:sayarah/features/login_feature/domain/entities/login_request_entity.dart';
+
+import '../../domain/entities/login_request_entity.dart';
 
 class LoginRequestModel extends LoginRequestEntity {
   LoginRequestModel({deviceCode, providerCode, pinCode, lat, lng,deviceOs})
@@ -11,8 +12,9 @@ class LoginRequestModel extends LoginRequestEntity {
             deviceOs: deviceOs
   );
 
+  @override
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['device_code'] = deviceCode;
     data['provider_code'] = providerCode;
     data['worker_pin'] = pinCode;

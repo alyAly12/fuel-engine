@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
+
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+
 
 
 class DeviceIdContainer extends StatelessWidget {
@@ -20,7 +22,7 @@ class DeviceIdContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 1, horizontal: 12),
+        padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 12),
         decoration: BoxDecoration(
             color: AppColors.deviceIdColor,
             border: Border.all(

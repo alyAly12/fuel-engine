@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sayarah/core/component/subtitle_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+import 'package:fuelsystem/core/component/subtitle_text_widget.dart';
+
+import '../utils/app_colors.dart';
+
 
 class CustomRoundedColumnButton extends StatelessWidget {
   const CustomRoundedColumnButton(
@@ -32,7 +34,7 @@ class CustomRoundedColumnButton extends StatelessWidget {
               height: 20,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 2,
           ),
           SubTitleWidget(

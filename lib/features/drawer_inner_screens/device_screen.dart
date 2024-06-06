@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_regular_appbar.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/device_screen_widgets/device_screen_body.dart';
+import 'package:fuelsystem/features/drawer_inner_screens/widgets/device_screen_widgets/device_screen_body.dart';
 import '../../core/component/custom_drawer.dart';
+import '../../core/component/custom_regular_appbar.dart';
 import '../../core/utils/app_colors.dart';
 
 class DeviceScreen extends StatelessWidget {
@@ -9,7 +9,7 @@ class DeviceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       drawer: CustomDrawer(),
       backgroundColor: AppColors.backGroundColor,
       appBar: PreferredSize(

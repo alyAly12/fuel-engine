@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+
 
 class CustomGradientContainer extends StatelessWidget {
   const CustomGradientContainer(

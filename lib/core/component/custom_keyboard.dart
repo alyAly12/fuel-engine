@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+
 
 import '../commom_bloc/keyboard_bloc/custom_keyboard_bloc.dart';
+import '../utils/app_colors.dart';
+import 'custom_text_widget.dart';
 
 class CustomKeyBoard extends StatefulWidget {
   final TextEditingController controller;
@@ -46,11 +47,11 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.customKeyboardColor,
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 1),
+        padding: const EdgeInsets.symmetric(horizontal: 1),
         child: Column(
           children: [
             Row(

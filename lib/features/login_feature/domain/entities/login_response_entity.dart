@@ -1,4 +1,5 @@
-import 'package:sayarah/features/login_feature/data/models/data.dart';
+
+import '../../data/models/data.dart';
 
 class LoginResponseEntity {
   LoginData? data;

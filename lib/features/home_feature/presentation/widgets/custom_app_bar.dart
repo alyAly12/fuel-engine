@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
 import '../../../../../core/component/custom_text_widget.dart';
 import '../../../../../core/component/subtitle_text_widget.dart';
+import '../../../../core/utils/assets_manager.dart';
 import 'custom_app_bar_header.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -31,12 +31,12 @@ class CustomAppBar extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.3),
                 child: CustomAppBarHeader(),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 60),
+                padding: const EdgeInsets.only(left: 60),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -46,10 +46,10 @@ class CustomAppBar extends StatelessWidget {
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    CustomTextWidget(
+                    const CustomTextWidget(
                       title: 'Ahmed Ali',
                       color: Colors.white,
                       fontSize: 15,

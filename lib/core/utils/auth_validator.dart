@@ -73,7 +73,7 @@ class AuthValidator {
     if (value!.isEmpty) {
       return 'Please enter Fuel amount';
     }
-    if (value.length < 1 || value.length > 3) {
+    if (value.isEmpty || value.length > 3) {
       return 'This field must be between 1 to 3 characters';
     }
     return null;

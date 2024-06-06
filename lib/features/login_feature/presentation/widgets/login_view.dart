@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/features/login_feature/presentation/screens/login_view_body.dart';
+
+import '../../../../core/utils/app_colors.dart';
 import '../bloc/login_bloc.dart';
+import '../screens/login_view_body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({

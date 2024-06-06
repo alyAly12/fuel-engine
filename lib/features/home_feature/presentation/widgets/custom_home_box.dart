@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/features/login_feature/presentation/screens/custom_home_logo_box.dart';
-
 import '../../../../../core/commom_bloc/theme_cubit/theme_cubit.dart';
 import '../../../../../core/component/custom_text_widget.dart';
 import '../../../../../core/component/subtitle_text_widget.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/assets_manager.dart';
+import '../../../login_feature/presentation/screens/custom_home_logo_box.dart';
 
 class CustomHomeBox extends StatelessWidget {
   const CustomHomeBox({super.key});
@@ -18,14 +17,14 @@ class CustomHomeBox extends StatelessWidget {
     ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: false);
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(top: 0.1),
+      padding: const EdgeInsets.only(top: 0.1),
       child: Card(
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 5),
+          padding: const EdgeInsets.symmetric(vertical: 5),
           width: size.width,
           decoration: BoxDecoration(
               color: theme.isDark ? AppColors.darkGrey : AppColors.homeBox,
@@ -54,7 +53,7 @@ class CustomHomeBox extends StatelessWidget {
                         color: AppColors.welcomeScript,
                         fontWeight: FontWeight.normal,
                       ),
-                      CustomTextWidget(
+                      const CustomTextWidget(
                         title: '203',
                         color: AppColors.pieChartColor,
                         fontWeight: FontWeight.w500,

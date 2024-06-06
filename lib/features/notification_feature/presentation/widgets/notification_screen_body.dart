@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
+import '../../../../core/utils/app_colors.dart';
 import 'notification_item.dart';
 
 class NotificationScreenBody extends StatelessWidget {
@@ -12,10 +12,10 @@ class NotificationScreenBody extends StatelessWidget {
         Expanded(
           child: ListView.separated(
               itemBuilder: (context, index) {
-                return NotificationItem();
+                return const NotificationItem();
               },
               separatorBuilder: (context, index) {
-                return Divider(
+                return const Divider(
                   thickness: 0.5,
                   color: AppColors.lightTitleColor,
                 );

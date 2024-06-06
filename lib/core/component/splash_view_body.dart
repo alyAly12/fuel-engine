@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
 import '../../../core/component/subtitle_text_widget.dart';
+import '../utils/app_colors.dart';
+import '../utils/assets_manager.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -21,7 +21,7 @@ class SplashViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 220),
+                padding: const EdgeInsets.symmetric(vertical: 220),
                 child: Center(
                     child: SvgPicture.asset(
                   AssetsManager.logoImage,
@@ -31,10 +31,10 @@ class SplashViewBody extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                     itemCount: 1,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      return Padding(
+                      return const Padding(
                         padding: EdgeInsets.all(9.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class SplashViewBody extends StatelessWidget {
                     }),
               )
             ],
-          ).animate(delay: Duration(seconds: 1)),
+          ).animate(delay: const Duration(seconds: 1)),
         )
       ]),
     );

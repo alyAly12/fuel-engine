@@ -19,7 +19,7 @@ class CustomHelpTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 2),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       child: TextFormField(
         maxLines: maxLines,
         focusNode: fieldNode,

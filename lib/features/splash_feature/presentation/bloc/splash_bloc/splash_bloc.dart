@@ -1,9 +1,9 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:sayarah/features/splash_feature/domain/entity/splash_response_entity.dart';
 import '../../../data/models/splash_response_model.dart';
+import '../../../domain/entity/splash_response_entity.dart';
 import '../../../domain/use_case/splash_usecase.dart';
 
 part 'splash_event.dart';

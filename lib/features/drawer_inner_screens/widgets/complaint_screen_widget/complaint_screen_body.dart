@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/complaint_screen_widget/complaint_header_container.dart';
-import 'package:sayarah/features/drawer_inner_screens/widgets/complaint_screen_widget/custom_complaint_field.dart';
-import 'package:sayarah/core/component/custom_button.dart';
+
+import '../../../../core/component/custom_button.dart';
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_strings.dart';
+import 'complaint_header_container.dart';
+import 'custom_complaint_field.dart';
+
 
 class ComplaintScreenBody extends StatefulWidget {
   const ComplaintScreenBody({super.key});
@@ -48,8 +50,8 @@ class _ComplaintScreenBodyState extends State<ComplaintScreenBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ComplaintHeaderContainer(),
-          SizedBox(
+          const ComplaintHeaderContainer(),
+          const SizedBox(
             height: 35,
           ),
           CustomTextWidget(
@@ -58,14 +60,14 @@ class _ComplaintScreenBodyState extends State<ComplaintScreenBody> {
             color: AppColors.appBarColor,
             fontWeight: FontWeight.w500,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           CustomComplainField(
             fieldController: title,
             hintTitle: AppStrings.title,
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           CustomTextWidget(
@@ -74,7 +76,7 @@ class _ComplaintScreenBodyState extends State<ComplaintScreenBody> {
             color: AppColors.appBarColor,
             fontWeight: FontWeight.w500,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           CustomComplainField(
@@ -82,7 +84,7 @@ class _ComplaintScreenBodyState extends State<ComplaintScreenBody> {
             hintTitle: AppStrings.enterDetails,
             maxLine: 5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 55,
           ),
           CustomLoginButton(

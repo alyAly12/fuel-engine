@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-
 import '../../../../../core/component/subtitle_text_widget.dart';
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
 import 'active_orders_item.dart';
 import 'custom_app_bar.dart';
 import 'custom_home_box.dart';
@@ -27,11 +26,11 @@ class HomeViewBody extends StatelessWidget {
         flexibleSpace: FlexibleSpaceBar(
           background: Container(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: AppColors.backGroundColor, border: Border.fromBorderSide(BorderSide.none)),
             child: Column(
               children: [
-                Expanded(
+                const Expanded(
                   child: Stack(children: [
                     CustomAppBar(),
                     Positioned(top: 112, left: 10, right: 10, child: CustomHomeBox()),
@@ -65,7 +64,7 @@ class HomeViewBody extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 )
               ],
@@ -88,7 +87,7 @@ class HomeViewBody extends StatelessWidget {
                     ? const EmptyHomeScreen()
                     : Flexible(
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 1),
+                          padding: const EdgeInsets.symmetric(horizontal: 1),
                           child: ListView.separated(
                             padding: EdgeInsets.zero,
                             shrinkWrap: false,

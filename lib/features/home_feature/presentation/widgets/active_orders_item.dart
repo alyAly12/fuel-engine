@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
 import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
 
 class ActiveOrdersItem extends StatelessWidget {
   const ActiveOrdersItem({super.key, required this.image, required this.color});
@@ -16,7 +16,7 @@ class ActiveOrdersItem extends StatelessWidget {
         GoRouter.of(context).pushReplacement(AppRoute.kStartFuelVehicle);
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +37,7 @@ class ActiveOrdersItem extends StatelessWidget {
             const SizedBox(
               width: 15,
             ),
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomTextWidget(
@@ -59,7 +59,7 @@ class ActiveOrdersItem extends StatelessWidget {
             const SizedBox(
               width: 40,
             ),
-            Column(
+            const Column(
               children: [
                 CustomTextWidget(
                   title: '2:30 min(s)',
@@ -79,7 +79,7 @@ class ActiveOrdersItem extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            Icon(
+            const Icon(
               Icons.arrow_forward_ios_outlined,
               color: AppColors.arrowColor,
               size: 20,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/features/scan_feature/presentation/widgets/vehicle_registration_widgets/vehicle_registration_body.dart';
+import 'package:fuelsystem/features/scan_feature/presentation/widgets/vehicle_registration_widgets/vehicle_registration_body.dart';
 import '../../../../../core/component/custom_drawer.dart';
 import '../../../../../core/component/custom_regular_appbar.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -15,15 +15,15 @@ class VehicleRegistrationScreen extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         backgroundColor: AppColors.backGroundColor,
         appBar: PreferredSize(
-            preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+            preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
             child: CustomRegularAppBar(
               mainTitle: AppStrings.vehicleRegistration,
               actionTitle: AppStrings.back,
             )),
-        body: VehicleRegistrationBody(),
+        body: const VehicleRegistrationBody(),
       ),
     );
   }

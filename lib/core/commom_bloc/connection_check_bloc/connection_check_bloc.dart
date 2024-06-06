@@ -85,7 +85,7 @@ class ConnectionCheckBloc
             color: Colors.red,
             icon: Icons.close),
       );
-    } else if (isNfcAvailable == await NFCAvailability.available) {
+    } else if (isNfcAvailable == NFCAvailability.available) {
       emit(NfcAvailabilityState(
           isDialogShown: state.isDialogShown,
           isAvailable: true,

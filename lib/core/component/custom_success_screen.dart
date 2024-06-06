@@ -16,11 +16,11 @@ class CustomSuccessScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 15),
         child: Column(
           children: [
             Lottie.asset(AssetsManager.check, height: 20),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             CustomTextWidget(
@@ -29,11 +29,11 @@ class CustomSuccessScreen extends StatelessWidget {
               color: AppColors.appBarColor,
               fontWeight: FontWeight.w600,
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

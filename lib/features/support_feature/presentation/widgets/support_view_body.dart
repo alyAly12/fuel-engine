@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets_manager.dart';
+
 
 class SupportViewBody extends StatelessWidget {
   const SupportViewBody({super.key});
@@ -13,8 +15,8 @@ class SupportViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(child: SvgPicture.asset(AssetsManager.soon)),
-        SizedBox(height: 4),
-        CustomTextWidget(
+        const SizedBox(height: 4),
+        const CustomTextWidget(
           title: 'SOON..',
           color: AppColors.appBarColor,
         )

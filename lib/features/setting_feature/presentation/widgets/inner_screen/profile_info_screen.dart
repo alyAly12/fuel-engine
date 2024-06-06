@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sayarah/core/component/custom_drawer.dart';
-import 'package:sayarah/core/component/custom_regular_appbar.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
+
+import '../../../../../core/component/custom_drawer.dart';
+import '../../../../../core/component/custom_regular_appbar.dart';
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/assets_manager.dart';
+
 
 class ProfileInfoScreen extends StatelessWidget {
   const ProfileInfoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final _scaffoldKey = GlobalKey<ScaffoldState>();
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
-      key: _scaffoldKey,
-      drawer: CustomDrawer(),
+      key: scaffoldKey,
+      drawer: const CustomDrawer(),
       appBar: PreferredSize(
-          preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+          preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
           child: CustomRegularAppBar(
             mainTitle: AppStrings.profileInformation,
             actionTitle: AppStrings.back,
@@ -28,12 +30,12 @@ class ProfileInfoScreen extends StatelessWidget {
           children: [
             Container(
               height: 200,
-              decoration: BoxDecoration(color: AppColors.orderNumberColor),
+              decoration: const BoxDecoration(color: AppColors.orderNumberColor),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
                 child: Row(
                   children: [
-                    Column(
+                    const Column(
                       children: [
                         CustomTextWidget(
                           title: 'Ahmed Ali',
@@ -59,21 +61,21 @@ class ProfileInfoScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Column(
                       children: [
-                        CustomTextWidget(
+                        const CustomTextWidget(
                           title: '2 may 2013 12:40 PM',
                           color: Colors.white,
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Container(
                           width: 110,
-                          padding: EdgeInsets.symmetric(vertical: 8),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           decoration: BoxDecoration(
                               color: AppColors.pieChartColor,
                               border: Border.all(color: Colors.white, width: 1),
@@ -93,10 +95,10 @@ class ProfileInfoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            CustomTextWidget(
+            const CustomTextWidget(
               title: 'ChillOut',
               fontSize: 17,
               fontWeight: FontWeight.w500,

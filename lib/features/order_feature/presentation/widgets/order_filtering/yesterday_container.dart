@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
 
 import '../../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_strings.dart';
 
 class YesterdayContainer extends StatelessWidget {
   const YesterdayContainer(
@@ -22,7 +22,7 @@ class YesterdayContainer extends StatelessWidget {
         onTap();
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 6),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 6),
         decoration: BoxDecoration(
             color: buttonColor, borderRadius: BorderRadius.circular(20), border: border),
         child: Padding(

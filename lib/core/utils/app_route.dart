@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_success_screen.dart';
-import 'package:sayarah/core/component/vehicle_register_success.dart';
-import 'package:sayarah/features/drawer_inner_screens/about_app_screen.dart';
-import 'package:sayarah/features/drawer_inner_screens/complaint_screen.dart';
-import 'package:sayarah/features/drawer_inner_screens/device_screen.dart';
-import 'package:sayarah/features/login_feature/presentation/widgets/login_view.dart';
-import 'package:sayarah/root_screen.dart';
+import '../../features/drawer_inner_screens/about_app_screen.dart';
+import '../../features/drawer_inner_screens/complaint_screen.dart';
+import '../../features/drawer_inner_screens/device_screen.dart';
 import '../../features/home_feature/presentation/screens/home_view.dart';
+import '../../features/login_feature/presentation/widgets/login_view.dart';
 import '../../features/notification_feature/presentation/screens/notification_screen.dart';
 import '../../features/order_feature/presentation/screens/order_view.dart';
 import '../../features/order_feature/presentation/widgets/details/orders_detail.dart';
@@ -32,6 +29,9 @@ import '../../features/splash_feature/presentation/screens/splash_view.dart';
 import '../../features/splash_feature/presentation/screens/welcome_view.dart';
 import '../../features/splash_feature/presentation/widgets/custom_page_transition.dart';
 import '../../features/support_feature/presentation/screens/support_view.dart';
+import '../../root_screen.dart';
+import '../component/custom_success_screen.dart';
+import '../component/vehicle_register_success.dart';
 final _key = GlobalKey<NavigatorState>();
 class AppRoute {
 

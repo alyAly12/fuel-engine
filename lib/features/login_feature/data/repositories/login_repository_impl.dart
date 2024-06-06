@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:sayarah/core/utils/errors/exceptions.dart';
-import 'package:sayarah/core/exceptions/failure.dart';
-import 'package:sayarah/features/login_feature/data/data_source/login_data_source.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_request_entity.dart';
-import 'package:sayarah/features/login_feature/domain/entities/login_response_entity.dart';
-import 'package:sayarah/features/login_feature/domain/repositories/login_repository.dart';
+
+import '../../../../core/exceptions/failure.dart';
+import '../../../../core/utils/errors/exceptions.dart';
+import '../../domain/entities/login_request_entity.dart';
+import '../../domain/entities/login_response_entity.dart';
+import '../../domain/repositories/login_repository.dart';
+import '../data_source/login_data_source.dart';
 
 class LoginRepositoryImpl implements LoginRepository {
   final LoginDataSource _remoteDataSource;

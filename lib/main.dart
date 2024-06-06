@@ -1,13 +1,11 @@
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/firebase_options.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'core/commom_bloc/connection_check_bloc/connection_check_bloc.dart';
 import 'core/commom_bloc/keyboard_bloc/custom_keyboard_bloc.dart';
 import 'core/commom_bloc/theme_cubit/theme_cubit.dart';
@@ -15,7 +13,10 @@ import 'core/component/navigator_global.dart';
 import 'core/services/service_locator.dart' as di;
 import 'core/services/service_locator.dart';
 import 'core/utils/app_colors.dart';
+import 'core/utils/app_route.dart';
+import 'core/utils/app_strings.dart';
 import 'features/signup_feature/domain/entities/handheld_model.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,10 +27,10 @@ void main() async {
   Hive.registerAdapter(HandHeldModelAdapter());
   await Hive.openBox<HandHeldModel>(AppStrings.kHandHeldBox);
   runApp(EasyLocalization(
-    child: MaterialApp(debugShowCheckedModeBanner: false, home: SyarahApp()),
-    supportedLocales: [Locale('en', 'US'), Locale('ur', 'UR')],
+    supportedLocales: const [Locale('en', 'US'), Locale('ur', 'UR')],
     path: 'assets/resources',
     saveLocale: true,
+    child: const MaterialApp(debugShowCheckedModeBanner: false, home: SyarahApp()),
   ));
 }
 

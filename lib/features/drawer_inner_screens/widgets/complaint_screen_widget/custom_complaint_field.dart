@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-
+import '../../../../core/component/custom_text_widget.dart';
 import '../../../../core/utils/app_colors.dart';
 
 class CustomComplainField extends StatelessWidget {
   const CustomComplainField(
       {super.key, required this.fieldController, this.hintTitle, this.maxLine = 1});
   final TextEditingController fieldController;
-  final hintTitle;
+  final String? hintTitle;
   final int? maxLine;
 
   @override
@@ -16,21 +15,21 @@ class CustomComplainField extends StatelessWidget {
       maxLines: maxLine,
       controller: fieldController,
       decoration: InputDecoration(
-        error: CustomTextWidget(
+        error: const CustomTextWidget(
           title: 'This field is Required',
           fontSize: 11,
           color: Colors.red,
         ),
         hintText: hintTitle,
-        hintStyle: TextStyle(color: AppColors.blackCoat, fontSize: 13),
-        border: OutlineInputBorder(
+        hintStyle: const TextStyle(color: AppColors.blackCoat, fontSize: 13),
+        border: const OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.orderNumberColor),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.orderNumberColor),
         ),
         enabled: true,
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.orderNumberColor),
         ),
       ),

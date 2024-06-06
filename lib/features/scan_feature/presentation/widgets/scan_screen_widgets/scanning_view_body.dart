@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fuelsystem/features/scan_feature/presentation/widgets/scan_screen_widgets/scan_header_container.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_text_button.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
-import 'package:sayarah/features/scan_feature/presentation/widgets/scan_screen_widgets/scan_header_container.dart';
 import '../../../../../../core/component/custom_text_widget.dart';
 import '../../../../../../core/utils/app_route.dart';
+import '../../../../../core/component/custom_text_button.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/assets_manager.dart';
 
 class ScanningViewBody extends StatelessWidget {
   const ScanningViewBody({super.key});
@@ -14,13 +14,13 @@ class ScanningViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ScanHeaderContainer(),
-          SizedBox(
+          const ScanHeaderContainer(),
+          const SizedBox(
             height: 20,
           ),
           CustomTextButton(
@@ -29,7 +29,7 @@ class ScanningViewBody extends StatelessWidget {
               onPressed: () {
                 GoRouter.of(context).push(AppRoute.kRegistrationScreen);
               }),
-          Spacer(),
+          const Spacer(),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(AppRoute.kReportIssue);
@@ -40,7 +40,7 @@ class ScanningViewBody extends StatelessWidget {
                 SvgPicture.asset(
                   AssetsManager.errorMark,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 1,
                 ),
                 CustomTextWidget(
@@ -51,7 +51,7 @@ class ScanningViewBody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           )
         ],

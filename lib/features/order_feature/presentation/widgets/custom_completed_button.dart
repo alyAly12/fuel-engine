@@ -16,7 +16,7 @@ class CustomCompletedButton extends StatelessWidget {
         fontSize: 15,
         fontWeight: FontWeight.bold,
       ),
-      SizedBox.shrink()
+      const SizedBox.shrink()
     ]);
   }
 }

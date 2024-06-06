@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nfc_kit/flutter_nfc_kit.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
 import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_strings.dart';
 import '../widgets/scan_screen_widgets/scanning_view_body.dart';
 
 class ScanningView extends StatelessWidget {
@@ -21,7 +21,7 @@ class ScanningView extends StatelessWidget {
           TextButton(
             onPressed: () async {
               GoRouter.of(context).pushReplacement(AppRoute.kRootScreen);
-              await Future.delayed(Duration(seconds: 1));
+              await Future.delayed(const Duration(seconds: 1));
               await FlutterNfcKit.finish();
             },
             child: CustomTextWidget(
@@ -33,7 +33,7 @@ class ScanningView extends StatelessWidget {
           ),
         ],
       ),
-      body: ScanningViewBody(),
+      body: const ScanningViewBody(),
     );
   }
 }

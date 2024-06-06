@@ -11,7 +11,7 @@ class DeviceScreenHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 250,
-      decoration: BoxDecoration(color: AppColors.orderNumberColor),
+      decoration: const BoxDecoration(color: AppColors.orderNumberColor),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
@@ -24,21 +24,21 @@ class DeviceScreenHeader extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.w500,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            CustomTextWidget(
+            const CustomTextWidget(
               title: 'H23T67Y',
               fontSize: 25,
               color: AppColors.blackCoat,
               fontWeight: FontWeight.w500,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               width: 110,
-              padding: EdgeInsets.symmetric(vertical: 8),
+              padding: const EdgeInsets.symmetric(vertical: 8),
               decoration: BoxDecoration(
                   color: AppColors.pieChartColor,
                   border: Border.all(color: Colors.white, width: 1),

@@ -23,7 +23,7 @@ class CustomDetailColumn extends StatelessWidget {
           fontSize: 15,
           color: AppColors.orderNumberColor,
         ),
-        SizedBox(
+        const SizedBox(
           height: 1,
         ),
         CustomTextWidget(

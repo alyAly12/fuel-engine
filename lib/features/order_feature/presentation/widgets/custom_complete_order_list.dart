@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
 import '../../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets_manager.dart';
 import 'completed_order_item.dart';
 import 'completed_orders_model.dart';
 
@@ -30,21 +30,21 @@ class CustomCompleteOrderList extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: ListView.separated(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: CompletedItemList.completedOrderList.length,
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: EdgeInsets.symmetric(vertical: 2),
+                        padding: const EdgeInsets.symmetric(vertical: 2),
                         child: CompletedOrdersItem(
                             image: CompletedItemList.completedOrderList[index].image,
                             color: CompletedItemList.completedOrderList[index].color),
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) {
-                      return Divider(
+                      return const Divider(
                         thickness: 0.5,
                         color: Colors.grey,
                       );

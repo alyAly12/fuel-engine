@@ -27,9 +27,9 @@ class CustomMeterContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 1),
+          padding: const EdgeInsets.symmetric(vertical: 1),
           child: TextFormField(
             onEditingComplete: onEditingCompletes,
             textInputAction: TextInputAction.next,
@@ -43,7 +43,7 @@ class CustomMeterContainer extends StatelessWidget {
             maxLength: maxLength,
             inputFormatters: [FilteringTextInputFormatter.digitsOnly],
             textCapitalization: TextCapitalization.characters,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.greyColor,
                 fontSize: 17,
                 letterSpacing: 4.0,
@@ -51,26 +51,26 @@ class CustomMeterContainer extends StatelessWidget {
                 decorationThickness: 0),
             decoration: InputDecoration(
                 hintText: '000',
-                hintStyle: TextStyle(color: AppColors.orderNumberColor),
+                hintStyle: const TextStyle(color: AppColors.orderNumberColor),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 14),
                   child: SvgPicture.asset(
                     image,
                   ),
                 ),
-                counter: Offstage(),
+                counter: const Offstage(),
                 isDense: true,
-                contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
-                enabledBorder: OutlineInputBorder(
+                contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+                enabledBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     borderSide: BorderSide(color: AppColors.orderNumberColor)),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     borderSide: BorderSide(color: AppColors.orderNumberColor)),
-                errorBorder: OutlineInputBorder(
+                errorBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     borderSide: BorderSide(color: AppColors.redColor)),
-                focusedErrorBorder: OutlineInputBorder(
+                focusedErrorBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     borderSide: BorderSide(color: AppColors.redColor))),
           )),

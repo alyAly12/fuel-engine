@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fuelsystem/features/setting_feature/presentation/widgets/setting_list.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_toggle_button.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/features/setting_feature/presentation/widgets/setting_list.dart';
 import '../../../../../core/commom_bloc/theme_cubit/theme_cubit.dart';
 import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../core/component/custom_toggle_button.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_route.dart';
+import '../../../../core/utils/app_strings.dart';
 
 class SettingViewBody extends StatefulWidget {
   const SettingViewBody({super.key});
@@ -22,7 +22,7 @@ class _SettingViewBodyState extends State<SettingViewBody> {
   Widget build(BuildContext context) {
     ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: true);
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -44,14 +44,14 @@ class _SettingViewBodyState extends State<SettingViewBody> {
               GoRouter.of(context).push(AppRoute.kHelpScreen);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          Divider(
+          const Divider(
             thickness: 1,
             color: AppColors.orderNumberColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           CustomTextWidget(
@@ -59,11 +59,11 @@ class _SettingViewBodyState extends State<SettingViewBody> {
             color: AppColors.appBarColor,
             fontSize: 15,
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 3),
+            padding: const EdgeInsets.symmetric(horizontal: 3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -76,11 +76,11 @@ class _SettingViewBodyState extends State<SettingViewBody> {
                     border: Border.all(color: AppColors.appBarColor),
                     onTap: () {
                       setState(() {
-                        context.setLocale(Locale('en', 'US'));
+                        context.setLocale(const Locale('en', 'US'));
                       });
                     },
                     radius: BorderRadius.circular(12)),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 CustomToggleButton(
@@ -92,7 +92,7 @@ class _SettingViewBodyState extends State<SettingViewBody> {
                     border: Border.all(color: AppColors.appBarColor),
                     onTap: () {
                       setState(() {
-                        context.setLocale(Locale('ur', 'UR'));
+                        context.setLocale(const Locale('ur', 'UR'));
                       });
                     },
                     radius: BorderRadius.circular(12)),

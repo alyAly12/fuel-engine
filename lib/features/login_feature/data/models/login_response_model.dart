@@ -1,5 +1,5 @@
-import 'package:sayarah/features/login_feature/domain/entities/login_response_entity.dart';
 
+import '../../domain/entities/login_response_entity.dart';
 import 'data.dart';
 
 class LoginResponseModel extends LoginResponseEntity {

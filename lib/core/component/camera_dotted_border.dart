@@ -13,7 +13,7 @@ class CameraDottedBorder extends StatelessWidget {
     return Container(
       height: 14,
       width: 25,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,
       ),
@@ -21,7 +21,7 @@ class CameraDottedBorder extends StatelessWidget {
         color: AppColors.orderNumberColor,
         strokeWidth: 2,
         strokeCap: StrokeCap.round,
-        dashPattern: [3, 10],
+        dashPattern: const [3, 10],
         borderType: BorderType.Circle,
         radius: const Radius.circular(8),
         padding: const EdgeInsets.all(8),
@@ -29,8 +29,8 @@ class CameraDottedBorder extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(12)),
             child: GestureDetector(
               onTap: onTap,
-              child: Center(
-                child: const Icon(
+              child: const Center(
+                child: Icon(
                   Icons.linked_camera_outlined,
                   size: 40,
                   color: AppColors.appBarColor,

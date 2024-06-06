@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_rounded_row_button.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/utils/app_route.dart';
-import 'package:sayarah/core/utils/app_strings.dart';
-import 'package:sayarah/core/utils/assets_manager.dart';
 
+
+import '../../../../../core/component/custom_rounded_row_button.dart';
+import '../../../../../core/component/custom_text_widget.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_route.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/assets_manager.dart';
 import 'custom_vehicle_detail_card.dart';
 
 class VehicleDetailsBody extends StatelessWidget {
@@ -16,8 +17,8 @@ class VehicleDetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomVehicleDetailCard(),
-        SizedBox(
+        const CustomVehicleDetailCard(),
+        const SizedBox(
           height: 70,
         ),
         CustomTextWidget(
@@ -26,16 +27,16 @@ class VehicleDetailsBody extends StatelessWidget {
           fontSize: 17,
           fontWeight: FontWeight.w600,
         ),
-        SizedBox(
+        const SizedBox(
           height: 70,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
+          padding: const EdgeInsets.symmetric(horizontal: 3),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 height: 50,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
@@ -53,7 +54,7 @@ class VehicleDetailsBody extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 height: 50,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8), color: AppColors.pieChartColor),

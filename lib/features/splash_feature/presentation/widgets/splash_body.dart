@@ -4,13 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sayarah/core/component/custom_text_widget.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/features/splash_feature/presentation/bloc/splash_bloc/splash_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/utils/app_route.dart';
 import '../../../../../core/utils/assets_manager.dart';
+import '../../../../core/component/custom_text_widget.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
+import '../bloc/splash_bloc/splash_bloc.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
@@ -22,7 +22,7 @@ class SplashBody extends StatefulWidget {
 class _SplashBodyState extends State<SplashBody> {
   Future<void> checkLogging() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    bool isLog = await pref.getBool(AppStrings.isLoggedIn) ?? false;
+    bool isLog =  pref.getBool(AppStrings.isLoggedIn) ?? false;
     if (isLog) {
       GoRouter.of(context).pushReplacement(AppRoute.kRootScreen);
     }
@@ -30,7 +30,7 @@ class _SplashBodyState extends State<SplashBody> {
 
   Future<void> checkRegister() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    bool isRegister = await pref.getBool(AppStrings.isRegister) ?? false;
+    bool isRegister =  pref.getBool(AppStrings.isRegister) ?? false;
     if (isRegister) {
       GoRouter.of(context).pushReplacement(AppRoute.kLoginView);
     }
@@ -49,7 +49,7 @@ class _SplashBodyState extends State<SplashBody> {
     return BlocListener<SplashBloc, SplashState>(
       listener: (context, state) {
         if (state is SplashSuccessState) {
-          Future.delayed(Duration(seconds: 3), () {
+          Future.delayed(const Duration(seconds: 3), () {
             GoRouter.of(context).pushReplacement(AppRoute.kWelcomeView);
           });
         } else if (state is SplashFailureState) {
@@ -68,14 +68,14 @@ class _SplashBodyState extends State<SplashBody> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 220),
+                    padding: const EdgeInsets.symmetric(vertical: 220),
                     child: Center(
                         child: SvgPicture.asset(
                       AssetsManager.logoImage,
                       height: size.height * 0.17,
                     )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   BlocBuilder<SplashBloc, SplashState>(
@@ -98,15 +98,14 @@ class _SplashBodyState extends State<SplashBody> {
                       } else if (state is SplashFailureState) {
                         return CustomTextWidget(title: state.errorMessage);
                       } else {
-                        return Center(child: CircularProgressIndicator());
+                        return const Center(child: CircularProgressIndicator());
                       }
                     },
                   )
-                ]).animate(delay: Duration(seconds: 5)),
+                ]).animate(delay: const Duration(seconds: 5)),
           )
         ]),
       ),
     );
-    ;
   }
 }

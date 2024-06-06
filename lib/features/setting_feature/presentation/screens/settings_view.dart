@@ -12,15 +12,15 @@ class SettingsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       appBar: PreferredSize(
-          preferredSize: Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
+          preferredSize: const Size(kBottomNavigationBarHeight, kBottomNavigationBarHeight + 10),
           child: CustomRegularAppBar(
             mainTitle: AppStrings.setting,
             actionTitle: 'Back',
             isVisi: true,
           )),
-      body: SettingViewBody(),
+      body: const SettingViewBody(),
     );
   }
 }

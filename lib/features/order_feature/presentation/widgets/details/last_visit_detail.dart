@@ -22,16 +22,16 @@ class LastVisitDetailWidget extends StatelessWidget {
           const SizedBox(
             width: 20,
           ),
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomTextWidget(
+              CustomTextWidget(
                 title: '30 L (Fuel 91)',
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
                 fontSize: 15,
               ),
-              const CustomTextWidget(
+              CustomTextWidget(
                 title: 'F000123',
                 color: Colors.black,
                 fontWeight: FontWeight.normal,

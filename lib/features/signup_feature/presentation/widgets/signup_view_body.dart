@@ -3,22 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:fuelsystem/features/signup_feature/presentation/widgets/show_qr_code_widget.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
-import 'package:platform_device_id_v3/platform_device_id.dart';
-import 'package:sayarah/core/utils/app_colors.dart';
-import 'package:sayarah/core/component/custom_button.dart';
-import 'package:sayarah/features/signup_feature/presentation/widgets/device_id_container.dart';
-import 'package:sayarah/features/signup_feature/presentation/widgets/show_qr_code_widget.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../../core/utils/app_strings.dart';
 import '../../../../../../core/utils/assets_manager.dart';
 import '../../../../../../core/utils/auth_validator.dart';
+import '../../../../core/component/custom_button.dart';
 import '../../../../core/component/lazy_loading_compponent.dart';
 import '../../../../core/services/service_locator.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../domain/entities/pairing_request_entity.dart';
 import '../bloc/pairing_bloc/pairing_bloc.dart';
 import 'custom_text_field.dart';
+import 'device_id_container.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({
@@ -167,7 +167,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     AssetsManager.appLogo,
                     height: 30,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
                   BlocBuilder<PairingBloc, PairingState>(
@@ -181,18 +181,18 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           },
                         );
                       }
-                      return DeviceIdContainer(
+                      return const DeviceIdContainer(
                         deviceId: '',
                       );
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   CustomTextField(
                     onlyRead: false,
                     styles:
-                        TextStyle(fontSize: 15, color: AppColors.appBarColor),
+                        const TextStyle(fontSize: 15, color: AppColors.appBarColor),
                     hintText: 'Provider code',
                     controller: providerCode,
                     focusNode: providerFocus,
@@ -202,7 +202,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       return AuthValidator.providerCodeValidator(value);
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   SizedBox(
@@ -211,7 +211,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                   CustomTextField(
                     hintText: 'Device code',
                     styles:
-                        TextStyle(fontSize: 15, color: AppColors.appBarColor),
+                        const TextStyle(fontSize: 15, color: AppColors.appBarColor),
                     controller: deviceCode,
                     focusNode: deviceFocus,
                     onEditingComplete: () =>
@@ -220,13 +220,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       return AuthValidator.deviceCodeValidator(value);
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   CustomTextField(
                     hintText: 'Device secret',
                     styles:
-                        TextStyle(fontSize: 15, color: AppColors.appBarColor),
+                        const TextStyle(fontSize: 15, color: AppColors.appBarColor),
                     controller: deviceSecret,
                     focusNode: secretFocus,
                     onEditingComplete: () =>
@@ -235,13 +235,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       return AuthValidator.deviceSecretValidator(value);
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   CustomTextField(
                     hintText: 'Agent code',
                     styles:
-                        TextStyle(fontSize: 15, color: AppColors.appBarColor),
+                        const TextStyle(fontSize: 15, color: AppColors.appBarColor),
                     controller: agentCode,
                     focusNode: agentFocus,
                     validator: (value) {
@@ -249,7 +249,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     },
                     nextAction: TextInputAction.done,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 80,
                   ),
                   BlocProvider<PairingBloc>.value(
@@ -275,7 +275,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       },
                       builder: (context, state) {
                         return isLoading
-                            ? Center(child: CircularProgressIndicator())
+                            ? const Center(child: CircularProgressIndicator())
                             : CustomLoginButton(
                                 buttonHeight: size.width * 0.14,
                                 onPressed: () async {

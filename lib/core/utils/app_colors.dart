@@ -29,7 +29,7 @@ class AppColors {
   static const Color connectionCancelColor = Color(0xffFEEDB6);
   static const Color deepRed = Color(0xffc8002f);
   static const Color splashColor = Color(0xffFADDDF);
-  static const Color deviceIdColor = Color(0xffFD5E8F5);
+  static const Color deviceIdColor = Color(0xfffd5e8f5);
   static const Color  idNumColor= Color(0xff4B7997);
   static const Color bkColorConnected = Color(0xffEFF2F5);
   static const Color bkColorNotConnected = Color(0xffFEEDB6);
